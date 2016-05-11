@@ -1,0 +1,5 @@
+- if logged_in?
+  = link_to "Sign Out", "/signout"
+  = link_to "マイページ", "/users/edit"
+- else
+  = link_to "Sign in with Twitter", "/auth/twitter"

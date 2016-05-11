@@ -3,14 +3,23 @@ class UsersController < ApplicationController
     @auth = request.env['omniauth.auth']
     @user = User.find_by(uid: @auth.uid)
     if @user
-      redirect_to create_sessions_url(uid: @auth.uid, token: @auth.credentials.token, secret: @auth.credentials.secret, name: @auth.extra.access_token.params[:screen_name])
+      data = {uid: @auth.uid, token: @auth.credentials.token, secret: @auth.credentials.secret, name: @auth.extra.access_token.params[:screen_name]}
+      redirect_to sessions_create_url(data)
+
     else
       @user = User.new
     end
   end
 
+  def show
+    @user = current_user
+  end
+
   def create
     @user = User.new(user_params)
+    uploader = ImageUploader.new
+    uploader.download! user_params[:image]
+    @user.image = uploader
     if @user.save
       login(@user)
       redirect_to root_url, :notice => "Signed in!"

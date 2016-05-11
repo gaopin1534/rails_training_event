@@ -3,11 +3,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-    auth = request.env["omniauth.auth"]
-    data.oauth_token] = auth.credentials.token
-    data.oauth_token_secret = auth.credentials.secret
-    data.uid = auth.uid
-    login data
+
+    # data.oauth_token = auth.credentials.token
+    # data.oauth_token_secret = auth.credentials.secret
+    # data.uid = auth.uid
+    login params
     redirect_to root_url, :notice => "Signed in!"
   end
 
@@ -17,4 +17,5 @@ class SessionsController < ApplicationController
     session[:username] = nil
     redirect_to root_url, :notice => "Signed out!"
   end
+
 end

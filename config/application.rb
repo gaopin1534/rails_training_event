@@ -25,7 +25,7 @@ module TwiEvent
     config.generators do |g|
       g.template_engine :haml
     end
-
+    config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
     config.sass.preferrd_syntax = :sass
     config.sass.syntax = :sass
   end

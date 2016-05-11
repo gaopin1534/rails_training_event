@@ -1,13 +1,9 @@
 module SessionsHelper
   def login params
-    session[:oauth_token] = params.token
-    session[:oauth_token_secret] = params.secret
-    session[:uid] = params.uid
-    if params.token.blank? || params.secret.blank?
-      false
-    else
-      true
-    end
+    params = params.attributes unless params.kind_of?(Hash)
+    session[:oauth_token] = params[:token]
+    session[:oauth_token_secret] = params[:secret]
+    session[:uid] = params[:uid]
   end
 
   def logged_in?

@@ -1,10 +1,5 @@
 %h1 イベント一覧
-- if logged_in?
-  = link_to "Sign Out", "/signout"
-  = link_to "マイページ", "/users/edit"
-- else
-  = link_to "Sign in with Twitter", "/auth/twitter"
-
+= render partial: "layouts/header"
 = div_for @events, class: "list-group-item" do |t|
   %h4
     %span

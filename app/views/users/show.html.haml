@@ -1,0 +1,14 @@
+%h1= link_to "マイページ", root_path
+= render partial: "layouts/header"
+
+%div
+  %p
+    = "ユーザーID: " + @user.name
+  %p
+    = "ニックネーム: " + @user.nickname
+  %p
+    = "自己紹介: " + @user.description
+  %p
+    = "プロフィール画像"
+    = image_tag @user.image.url
+  .clear
