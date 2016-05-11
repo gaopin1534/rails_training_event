@@ -19,7 +19,9 @@ gem 'omniauth-oauth2'
 gem 'omniauth-twitter'
 gem "rspec"
 gem 'twitter'
-
+gem 'twitter-bootstrap-rails'
+gem 'seed-fu'
+gem 'carrierwave'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

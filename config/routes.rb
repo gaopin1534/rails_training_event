@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
-  get 'events/index'
+  root 'events#index'
+  get 'sessions/new'
 
-  get 'events/detail'
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+  resources :users
+
+  resources :events
+  match "/auth/:provider/callback" => "users#new", via: [:get, :post]
+  match "/signout" => "sessions#destroy", via: [:get, :post]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

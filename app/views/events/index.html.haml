@@ -1,0 +1,17 @@
+%h1 イベント一覧
+- if logged_in?
+  = link_to "Sign Out", "/signout"
+  = link_to "マイページ", "/users/edit"
+- else
+  = link_to "Sign in with Twitter", "/auth/twitter"
+
+= div_for @events, class: "list-group-item" do |t|
+  %h4
+    %span
+      = link_to t.title, event_path(t)
+    %p.time.pull-right
+      = t.hold_at
+      .clear
+      %p
+        = t.description
+  %hr

@@ -1,0 +1,23 @@
+%h1 Users#new
+%p
+  = form_for @user do |f|
+    %h2
+      会員登録する
+    - @user.errors.each do |attr, message|
+      .alert.alert-danger= message
+    .form-group
+      = f.label :name, "ユーザー名: @hogehoge", class: "control-label"
+      = f.text_field :name, class: "form-control", value: @auth.extra.access_token.params[:screen_name]
+    .form-group
+      = f.label :nickname, "ニックネーム:hogehoge@hogehoe.jp", class: "control-label"
+      = f.text_field :nickname, class: "form-control"
+    .form-group
+      = f.label :description, "自己紹介", class: "control-label"
+      = f.text_area :description, class: "form-control"
+    = f.submit "登録する", class: "btn btn-primary"
+    .clear
+
+    = f.hidden_field :uid, :value => @auth.uid
+    = f.hidden_field :token, :value => @auth.credentials.token
+    = f.hidden_field :secret, :value => @auth.credentials.secret
+    = f.hidden_field :image, :value => @auth.extra.raw_info.profile_image_url
