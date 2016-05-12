@@ -25,7 +25,7 @@ module SessionsHelper
 
   def login_filter
     unless logged_in?
-      redirect_to root_path
+      redirect_to root_path, notice: 'you need to login to use this function'
     end
   end
 

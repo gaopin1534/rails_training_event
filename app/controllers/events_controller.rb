@@ -6,6 +6,11 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    if @event.atendees.include?(current_user)
+      @absented = Absented.new
+    else
+      @atended = Atended.new
+    end
   end
 
   def new

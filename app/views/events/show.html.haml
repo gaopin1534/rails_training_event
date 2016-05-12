@@ -1,8 +1,18 @@
 %h1
   = link_to "イベント詳細", root_path
+
+- if current_user == @event.owner
   %span
   = link_to "編集", edit_event_path
   = link_to "削除", event_path, method: :delete
+- if @event.atendees.include?(current_user)
+  = form_for @absented, url: absenteds_create_path, method: :post do |j|
+    = j.hidden_field :event_id, :value => @event.id
+    = j.submit "参加をキャンセルする", class: "btn btn-primary"
+- else
+  = form_for @atended, url: atendeds_create_path, method: :post do |j|
+    = j.hidden_field :event_id, :value => @event.id
+    = j.submit "参加する", class: "btn btn-primary"
 
 = render partial: "layouts/header"
 = render partial: "shared/flash_message", locals: {flash: flash}
@@ -12,7 +22,7 @@
   %p
     = "日時: " + @event.hold_at.to_s
   %p
-    = "人数: " + @event.capacity.to_s
+    = "人数: " + @event.atendees.count.to_s + "/" + @event.capacity.to_s
   %p
     = "場所: " + @event.location
   %p

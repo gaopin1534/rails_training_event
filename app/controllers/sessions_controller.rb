@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
   def destroy
     session[:oauth_token] = nil
     session[:oauth_token_secret] = nil
-    session[:username] = nil
+    session[:uid] = nil
     redirect_to root_url, :notice => "Signed out!"
   end
 

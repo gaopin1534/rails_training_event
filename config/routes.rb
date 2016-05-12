@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   get 'sessions/create'
   get 'sessions/destroy'
   resources :users
-
+  post 'atendeds/create'
+  delete 'atendeds/destroy'
+  post 'absenteds/create'
+  delete 'absenteds/destroy'
   resources :events
   match "/auth/:provider/callback" => "users#new", via: [:get, :post]
   match "/signout" => "sessions#destroy", via: [:get, :post]
