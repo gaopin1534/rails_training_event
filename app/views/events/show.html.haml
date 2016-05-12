@@ -30,3 +30,11 @@
   %p
     = "詳細: " + @event.description
   .clear
+%p#atendee
+  %h2
+    参加者
+  = render partial: "events/members", locals: {members: @event.atendees}
+%p#absence
+  %h2
+    キャンセル
+  = render partial: "events/members", locals: {members: @event.absences}

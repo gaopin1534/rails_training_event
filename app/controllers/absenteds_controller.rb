@@ -5,10 +5,8 @@ class AbsentedsController < ApplicationController
     @absent.user = current_user
     @absent.event = Event.find(absented_params[:event_id])
     if @absent.save
-      if @absent.event.atendees.include?(current_user)
-        @atend = Atended.find_by(user: current_user)
-        @atend.destroy
-      end
+      @atend = Atended.find_by(user: current_user)
+      @atend.destroy
       redirect_to @absent.event, notice: "you canceled this event!"
     else
       redirect_to @absent.event, alert: "failed canceling this event"
