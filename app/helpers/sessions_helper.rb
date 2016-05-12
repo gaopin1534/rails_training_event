@@ -23,4 +23,10 @@ module SessionsHelper
     end
   end
 
+  def login_filter
+    unless logged_in?
+      redirect_to root_path
+    end
+  end
+
 end

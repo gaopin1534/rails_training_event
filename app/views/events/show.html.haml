@@ -1,0 +1,17 @@
+%h1= link_to "イベント詳細", root_path
+= render partial: "layouts/header"
+
+%div
+  %p
+    = "タイトル: " + @event.title
+  %p
+    = "日時: " + @event.hold_at.to_s
+  %p
+    = "人数: " + @event.capacity.to_s
+  %p
+    = "場所: " + @event.location
+  %p
+    = "主催者: " + @event.owner.to_s
+  %p
+    = "詳細: " + @event.description
+  .clear
