@@ -3,8 +3,8 @@
 
 - if current_user == @event.owner
   %span
-  = link_to "編集", edit_event_path
-  = link_to "削除", event_path, method: :delete
+  = link_to "Edit", edit_event_path
+  = link_to "Destroy", event_path, method: :delete
 - if @event.atendees.include?(current_user)
   = form_for @absented, url: absenteds_create_path, method: :post do |j|
     = j.hidden_field :event_id, :value => @event.id

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   post 'absenteds/create'
   delete 'absenteds/destroy'
   resources :events
-  match "/auth/:provider/callback" => "users#new", via: [:get, :post]
+  match "/auth/:provider/callback" => "users#create", via: [:get, :post]
   match "/signout" => "sessions#destroy", via: [:get, :post]
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -6,7 +6,7 @@ FactoryGirl.define do
     hold_at "2016-05-11 14:54:54"
     capacity 1
     location "MyString"
-    owner 1
+    association :owner, factory: :user
     description "MyText"
   end
 end

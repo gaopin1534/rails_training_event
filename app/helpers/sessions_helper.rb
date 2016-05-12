@@ -1,9 +1,14 @@
 module SessionsHelper
-  def login params
-    params = params.attributes unless params.kind_of?(Hash)
+  def login! params
+    params = params.attributes.with_indifferent_access unless params.kind_of?(Hash)
     session[:oauth_token] = params[:token]
     session[:oauth_token_secret] = params[:secret]
     session[:uid] = params[:uid]
+    if session[:oauth_token].blank? | session[:oauth_token_secret].blank? | session[:uid].blank?
+      false
+    else
+      true
+    end
   end
 
   def logged_in?
@@ -25,7 +30,7 @@ module SessionsHelper
 
   def login_filter
     unless logged_in?
-      redirect_to root_path, notice: 'you need to login to use this function'
+      redirect_to root_path, notice: 'you need to login!to use this function'
     end
   end
 

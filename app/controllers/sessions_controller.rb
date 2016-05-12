@@ -7,8 +7,11 @@ class SessionsController < ApplicationController
     # data.oauth_token = auth.credentials.token
     # data.oauth_token_secret = auth.credentials.secret
     # data.uid = auth.uid
-    login params
-    redirect_to root_url, :notice => "Signed in!"
+    if login! params
+      redirect_to root_url, :notice => "login as " + current_user.name
+    else
+      redirect_to root_url, :notice => "login failure"
+    end
   end
 
   def destroy

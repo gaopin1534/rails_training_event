@@ -4,10 +4,11 @@
 = div_for @events, class: "list-group-item" do |t|
   %h4
     %span
-      = link_to t.title, event_path(t)
+      = t.title
       - if current_user == t.owner
         = link_to "編集", edit_event_path(t)
         = link_to "削除", event_path(t), method: :delete
+        = link_to "Show", event_path(t)
     %p.time.pull-right
       = t.hold_at
       .clear
