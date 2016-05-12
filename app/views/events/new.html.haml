@@ -1,7 +1,7 @@
 %p
   = form_for @event do |f|
     %h2
-      新規イベント作成
+      = link_to "イベント作成", root_path
     = render partial: "shared/error_display", locals: {object: @event}
     .form-group
       = f.label :title, "イベントタイトル", class: "control-label"

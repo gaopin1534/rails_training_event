@@ -2,9 +2,10 @@
   = link_to "イベント詳細", root_path
   %span
   = link_to "編集", edit_event_path
+  = link_to "削除", event_path, method: :delete
 
 = render partial: "layouts/header"
-
+= render partial: "shared/flash_message", locals: {flash: flash}
 %div
   %p
     = "タイトル: " + @event.title
