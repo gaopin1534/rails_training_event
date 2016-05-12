@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :login_filter, except: [:index,:show]
   def index
     @events = Event.all
   end
@@ -11,20 +12,33 @@ class EventsController < ApplicationController
     @event = Event.new
   end
 
+  def edit
+    @event = Event.find(params[:id])
+  end
+
   def create
     @event = Event.new(event_params)
-    if @user.save
-      login(@user)
-      redirect_to root_url, :notice => "Signed in!"
+    @event.owner = current_user
+    if @event.save
+      redirect_to @event, :notice => "event created!"
     else
       render :new
+    end
+  end
+
+  def update
+    @event = Event.find(params[:id])
+    if @event.update_attributes(event_params)
+      redirect_to @event, notice: "event updated"
+    else
+      render 'edit'
     end
   end
 
   private
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def user_params
-      params.require(:event).permit(:title, :hold_at, :description, :capacity, :location, :owner)
+    def event_params
+      params.require(:event).permit(:title, :hold_at, :description, :capacity, :location)
     end
 end

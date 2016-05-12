@@ -1,5 +1,7 @@
+%p
 - if logged_in?
   = link_to "Sign Out", "/signout"
   = link_to "マイページ", current_user
+  = link_to "イベント作成", new_event_path
 - else
   = link_to "Sign in with Twitter", "/auth/twitter"

@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :login_filter, only: [:show]
   def new
     @auth = request.env['omniauth.auth']
     @user = User.find_by(uid: @auth.uid)

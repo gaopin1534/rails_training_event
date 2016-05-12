@@ -1,0 +1,22 @@
+%p
+  = form_for @event do |f|
+    %h2
+      新規イベント作成
+    = render partial: "shared/error_display", locals: {object: @event}
+    .form-group
+      = f.label :title, "イベントタイトル", class: "control-label"
+      = f.text_field :title, class: "form-control"
+    .form-group
+      = f.label :hold_at, "開催日時", class: "control-label"
+      = f.datetime_select :hold_at, minute_step: 10 , class: "form-control"
+    .form-group
+      = f.label :capacity, "定員", class: "control-label"
+      = f.number_field :capacity, class: "form-control", required: true, min:"0"
+    .form-group
+      = f.label :location, "会場", class: "control-label"
+      = f.text_field :location, class: "form-control"
+    .form-group
+      = f.label :description, "詳細", class: "control-label"
+      = f.text_area :description, class: "form-control"
+    = f.submit "登録する", class: "btn btn-primary"
+    .clear
