@@ -4,6 +4,7 @@ module SessionsHelper
     session[:oauth_token] = params[:token]
     session[:oauth_token_secret] = params[:secret]
     session[:uid] = params[:uid]
+    session[:user_id] = current_user.id
     if session[:oauth_token].blank? | session[:oauth_token_secret].blank? | session[:uid].blank?
       false
     else
@@ -12,15 +13,15 @@ module SessionsHelper
   end
 
   def logged_in?
-    true if session[:oauth_token]
+    true if session[:user_id]
   end
 
   # 記憶トークンcookieに対応するユーザーを返す
   def current_user
-    if (uid = session[:uid])
-      @current_user ||= User.find_by(uid: uid)
-    elsif (uid = cookies.signed[:uid])
-      user = User.find_by(uid: uid)
+    if (user_id = session[:user_id])
+      @current_user ||= User.find_by(id: user_id)
+    elsif (user_id = cookies.signed[:uid])
+      user = User.find_by(id: user_id)
       if user && user.authenticated?(:remember, cookies[:remember_token])
         log_in user
         @current_user = user
@@ -30,7 +31,7 @@ module SessionsHelper
 
   def login_filter
     unless logged_in?
-      redirect_to root_path, notice: 'you need to login!to use this function'
+      redirect_to events_path, notice: 'Please login first.'
     end
   end
 

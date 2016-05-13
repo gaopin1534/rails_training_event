@@ -13,6 +13,8 @@ class AbsentedsController < ApplicationController
     end
   end
 
+  
+
   private
     def absented_params
       params.require(:absented).permit(:event_id)

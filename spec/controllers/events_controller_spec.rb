@@ -9,7 +9,7 @@ RSpec.describe EventsController, type: :controller do
     end
   end
 
-  describe "GET #detail" do
+  describe "GET #show" do
     it "returns http success" do
       get :detail
       expect(response).to have_http_status(:success)

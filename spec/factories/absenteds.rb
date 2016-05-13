@@ -1,8 +1,6 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
-
 FactoryGirl.define do
   factory :absented do
-    user_id 1
-    event_id 1
+    association :user
+    association :event
   end
 end

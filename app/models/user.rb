@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :events, foreign_key: "owner"
+  has_many :events
+  has_many :atendees
   has_many :atendeds
   has_many :atend_events, class_name: 'Event', through: :atendeds, source: :event, dependent: :delete_all
   has_many :absenteds

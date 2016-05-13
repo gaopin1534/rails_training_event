@@ -9,7 +9,13 @@ Rails.application.routes.draw do
   delete 'atendeds/destroy'
   post 'absenteds/create'
   delete 'absenteds/destroy'
-  resources :events
+  get 'events/atend'
+  resources :events do
+    member do
+      get 'absent'
+      get 'atend'
+    end
+  end
   match "/auth/:provider/callback" => "users#create", via: [:get, :post]
   match "/signout" => "sessions#destroy", via: [:get, :post]
 

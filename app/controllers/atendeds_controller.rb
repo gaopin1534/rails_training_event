@@ -15,6 +15,7 @@ class AtendedsController < ApplicationController
     end
   end
 
+  
   private
     def atended_params
       params.require(:atended).permit(:event_id)

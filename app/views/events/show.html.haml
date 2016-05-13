@@ -1,18 +1,19 @@
 %h1
   = link_to "イベント詳細", root_path
 
-- if current_user == @event.owner
+- if logged_in?
   %span
   = link_to "Edit", edit_event_path
   = link_to "Destroy", event_path, method: :delete
-- if @event.atendees.include?(current_user)
-  = form_for @absented, url: absenteds_create_path, method: :post do |j|
-    = j.hidden_field :event_id, :value => @event.id
-    = j.submit "参加をキャンセルする", class: "btn btn-primary"
-- else
-  = form_for @atended, url: atendeds_create_path, method: :post do |j|
-    = j.hidden_field :event_id, :value => @event.id
-    = j.submit "参加する", class: "btn btn-primary"
+- if current_user
+  %p
+  - if current_user.atendees.with_event(@event.id).first
+    - if current_user.atendees.with_event(@event.id).first.atend?
+      = link_to "Absent", absent_event_path(@event)
+    - else
+      = link_to "Atend", atend_event_path(@event)
+  - else
+    = link_to "Atend", atend_event_path(@event)
 
 = render partial: "layouts/header"
 = render partial: "shared/flash_message", locals: {flash: flash}
@@ -26,15 +27,13 @@
   %p
     = "場所: " + @event.location
   %p
-    = "主催者: " + @event.owner.name
+    = "主催者: " + @event.owner
   %p
     = "詳細: " + @event.description
   .clear
-%p#atendee
-  %h2
-    参加者
-  = render partial: "events/members", locals: {members: @event.atendees}
-%p#absence
-  %h2
-    キャンセル
-  = render partial: "events/members", locals: {members: @event.absences}
+%div#attendance
+  = "attendance"
+  = render partial: "events/members", locals: {members: @event.atendees.atends}
+%div#absence
+  = "absence"
+  = render partial: "events/members", locals: {members: @event.atendees.absents}

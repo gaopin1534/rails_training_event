@@ -1,4 +1,4 @@
 = div_for members, class: "list-group-item" do |t|
-  %h4.user
-    %span.user-name
-      = link_to t.name, user_path(t)
+  %span.user-name#t.id
+    = t.user.name
+    = link_to t.user.name, user_path(t.user)

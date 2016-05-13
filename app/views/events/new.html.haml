@@ -16,7 +16,10 @@
       = f.label :location, "会場", class: "control-label"
       = f.text_field :location, class: "form-control"
     .form-group
+      = f.label :owner, "開催者", class: "control-label"
+      = f.text_field :owner, class: "form-control"
+    .form-group
       = f.label :description, "詳細", class: "control-label"
       = f.text_area :description, class: "form-control"
-    = f.submit "登録する", class: "btn btn-primary"
+    = f.submit "Create Event", class: "btn btn-primary"
     .clear
