@@ -6,7 +6,7 @@
     = render partial: "shared/error_display", locals: {object: @user}
     .form-group
       = f.label :name, "ユーザー名: @hogehoge", class: "control-label"
-      = f.text_field :name, class: "form-control", value: @auth.extra.access_token.params[:screen_name]
+      = f.text_field :name, class: "form-control", value: @auth.info.name
     .form-group
       = f.label :nickname, "ニックネーム:hogehoge@hogehoe.jp", class: "control-label"
       = f.text_field :nickname, class: "form-control"

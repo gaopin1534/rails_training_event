@@ -4,7 +4,7 @@ module SessionsHelper
     session[:oauth_token] = params[:token]
     session[:oauth_token_secret] = params[:secret]
     session[:uid] = params[:uid]
-    session[:user_id] = current_user.id
+    session[:user_id] = params[:id]
     if session[:oauth_token].blank? | session[:oauth_token_secret].blank? | session[:uid].blank?
       false
     else
@@ -27,6 +27,10 @@ module SessionsHelper
         @current_user = user
       end
     end
+  end
+
+  def failure
+    redirect_to events_url, alert: "login failure"
   end
 
   def login_filter
