@@ -14,4 +14,5 @@ class Event < ActiveRecord::Base
   validates :location, presence: true
   validates :owner, presence: true
   validates :description, presence: true
+  validates :user, presence: true
 end
