@@ -20,8 +20,12 @@ gem 'omniauth-twitter'
 gem "rspec"
 gem 'twitter'
 gem 'twitter-bootstrap-rails'
+gem 'bootstrap-sass'
+gem 'momentjs-rails'
+gem 'bootstrap3-datetimepicker-rails'
 gem 'seed-fu'
 gem 'carrierwave'
+gem 'jquery-turbolinks'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

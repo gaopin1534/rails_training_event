@@ -1,17 +1,2 @@
 %h1 イベント一覧
-= render partial: "layouts/header"
-= render partial: "shared/flash_message", locals: {flash: flash}
-= div_for @events, class: "list-group-item" do |t|
-  %div
-    %span
-      = t.title
-      - if current_user == t.owner
-        -# = link_to "編集", edit_event_path(t)
-        -# = link_to "削除", event_path(t), method: :delete
-      = link_to "Show", event_path(t)
-    %p.time.pull-right
-      = t.hold_at
-      .clear
-      %p
-        = t.description
-  %hr
+= render partial: "events", locals: {events: @events}

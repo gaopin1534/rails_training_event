@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
-  has_many :events
-  has_many :atendees
-
+  has_many :events, :dependent => :destroy
+  has_many :atendees, :dependent => :destroy
+  has_many :atend_events, class_name: 'Event', through: :atendees, source: :event
   validates :name, presence: true
   validates :nickname, presence: true
   validates :description, presence: true

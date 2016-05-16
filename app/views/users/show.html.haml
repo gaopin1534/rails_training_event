@@ -1,14 +1,20 @@
-%h1= link_to "マイページ", root_path
-= render partial: "layouts/header"
+%h1
+  マイページ
 
-%div
-  %p
-    = "ユーザーID: " + @user.name
-  %p
-    = "ニックネーム: " + @user.nickname
-  %p
-    = "自己紹介: " + @user.description
-  %p
-    = "プロフィール画像"
-    = image_tag @user.image.url
-  .clear
+%ul.list-unstyled.user-info
+  %li.user-names.container
+    %span
+      = image_tag @user.image.url
+    %span.lead
+      = @user.name
+    %span.small
+      = "@" + @user.nickname.strip
+  %li
+    自己紹介<br>
+    = @user.description
+%h4
+  参加予定イベント
+= render partial: "events", locals: {events: @user.atend_events}
+%h4
+  作成イベント
+= render partial: "events", locals: {events: @user.events}

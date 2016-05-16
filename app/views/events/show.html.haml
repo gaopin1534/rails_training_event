@@ -1,23 +1,21 @@
 %h1
-  = link_to "イベント詳細", root_path
+  イベント詳細
 
 - if logged_in?
   %span
+  - if current_user
+    - if current_user.atendees.with_event(@event.id).first
+      - if current_user.atendees.with_event(@event.id).first.atend?
+        = link_to "Absent", absent_event_path(@event), class: "btn btn-danger"
+      - else
+        = link_to "Atend", atend_event_path(@event), class: "btn btn-primary"
+    - else
+      = link_to "Atend", atend_event_path(@event), class: "btn btn-primary"
   = link_to "Edit", edit_event_path
   = link_to "Destroy", event_path, method: :delete
-- if current_user
-  %p
-  - if current_user.atendees.with_event(@event.id).first
-    - if current_user.atendees.with_event(@event.id).first.atend?
-      = link_to "Absent", absent_event_path(@event)
-    - else
-      = link_to "Atend", atend_event_path(@event)
-  - else
-    = link_to "Atend", atend_event_path(@event)
 
-= render partial: "layouts/header"
-= render partial: "shared/flash_message", locals: {flash: flash}
-%div
+
+%div.event-info
   %p
     = "タイトル: " + @event.title
   %p
@@ -33,7 +31,7 @@
   .clear
 %div#attendance
   = "attendance"
-  = render partial: "events/members", locals: {members: @event.atendees.atends}
+  = render partial: "members", locals: {members: @event.atendees.atends}
 %div#absence
   = "absence"
-  = render partial: "events/members", locals: {members: @event.atendees.absents}
+  = render partial: "members", locals: {members: @event.atendees.absents}

@@ -1,3 +1,19 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user-info{
+  padding-top:20px;
+  li{
+    height:65px;
+  }
+  .user-names{
+    span{
+      position:relative;
+      bottom:0;
+    }
+  }
+}
+.member-form-container{
+  position: relative;
+}

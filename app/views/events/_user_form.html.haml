@@ -1,14 +1,14 @@
 %div.container.member-form-container
   = form_for @event do |f|
     %h2
-      = link_to "イベント作成", root_path
+      = link_to "イベント編集", root_path
     = render partial: "error_display", locals: {object: @event}
     .form-group
       = f.label :title, "イベントタイトル", class: "control-label"
       = f.text_field :title, class: "form-control"
     .form-group
       = f.label :hold_at, "開催日時", class: "control-label"
-      = f.datetime_select :hold_at, minute_step: 10 , class: "form-control"
+      = f.text_field :hold_at, data: { :date_format => 'YYYY/MM/DD hh:mm' }, :class => 'form-control datetimepicker', placeholder: 'YYYY/MM/DD hh:mm:ss'
     .form-group
       = f.label :capacity, "定員", class: "control-label"
       = f.number_field :capacity, class: "form-control", required: true, min:"0"
@@ -21,6 +21,5 @@
     .form-group
       = f.label :description, "詳細", class: "control-label"
       = f.text_area :description, class: "form-control"
-    = f.submit "Create Event", class: "btn btn-primary"
+    = f.submit submit_btn, class: "btn btn-primary"
     .clear
--# = render partial: "user_form", locals: {events: @event, submit_btn: 'Create Event'}

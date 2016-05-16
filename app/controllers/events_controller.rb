@@ -48,7 +48,7 @@ class EventsController < ApplicationController
     @atendee = Atendee.find_by(user: current_user, event: @event)
     @atendee.status = "absented"
     @atendee.save
-    redirect_to @event
+    redirect_to @event, notice: '参加をキャンセルしました'
   end
 
   def atend
@@ -64,7 +64,7 @@ class EventsController < ApplicationController
       @atendee.save
     end
 
-    redirect_to @event , notice: current_user.name + ' " in "'
+    redirect_to @event , notice: 'イベントに参加しました'
   end
   private
 

@@ -1,0 +1,19 @@
+%div.list-group.event-list
+  = div_for events, class: "list-group-item" do |t|
+    %div.lead
+      = t.title
+    %ul.list-unstyled
+      %li
+        日時:
+        = t.hold_at
+      %li
+        場所:
+        = t.location
+      %li
+        主催者:
+        = t.owner
+      %li
+        人数:
+        = t.atendees.count.to_s + "/" + t.capacity.to_s
+    = link_to "Show", event_path(t), class: "btn btn-primary pull-right"
+    .clear
