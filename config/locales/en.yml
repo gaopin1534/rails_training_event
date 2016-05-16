@@ -1,5 +1,27 @@
 ---
 en:
+  description: "profile"
+  attend_event: "attend"
+  attendance: "attendance"
+  absent_event: "absent"
+  absence: "absence"
+  own_event: "hosting"
+  my_page: "my page"
+  create_event: "create event"
+  login_twitter: "log-in with Twitter"
+  login_github: "log-in with Github"
+  app_name: "ATND like"
+  title: "title"
+  hold_at: "date"
+  location: "location"
+  owner: "host"
+  capacity: "capacity"
+  no_events: "there is no event"
+  no_members: "there is no member"
+  event_detail: "event detail"
+  event_list: "event list"
+  event_edit: "event edit"
+
   activerecord:
     errors:
       messages:

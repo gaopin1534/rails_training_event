@@ -1,8 +1,8 @@
 - if members.empty?
   %div.list-group-item
-    メンバーがいません
+    = t :no_members
 = div_for members, class: "list-group-item" do |t|
   %span.user-name#t.id
-    = image_tag t.user.image.url
+    = image_tag t.user.image.url ,class: "profile-image"
     = link_to t.user.name, user_path(t.user)
     = t.user.nickname

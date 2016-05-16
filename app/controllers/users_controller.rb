@@ -17,6 +17,7 @@ class UsersController < ApplicationController
         login!(@user)
         redirect_to root_path, :notice => "Signed in!"
       else
+        raise
         redirect_to root_path, :notice => "failed to logging in"
       end
     end

@@ -1,22 +1,22 @@
 - if events.empty?
   %div.list-group-item
-    イベントはありません
+    = t(:no_events)
 %div.list-group.event-list
-  = div_for events, class: "list-group-item" do |t|
+  = div_for events, class: "list-group-item" do |e|
     %div.lead
-      = t.title
+      = e.title
     %ul.list-unstyled
       %li
-        日時:
-        = t.hold_at
+        = t(:hold_at) + ":"
+        = e.hold_at
       %li
-        場所:
-        = t.location
+        = t(:location) + ":"
+        = e.location
       %li
-        主催者:
-        = t.owner
+        = t(:owner) + ":"
+        = e.owner
       %li
-        人数:
-        = t.atendees.count.to_s + "/" + t.capacity.to_s
-    = link_to "Show", event_path(t), class: "btn btn-primary pull-right"
+        = t(:capacity) + ":"
+        = e.atendees.count.to_s + "/" + e.capacity.to_s
+    = link_to "Show", event_path(e), class: "btn btn-primary pull-right"
     .clear

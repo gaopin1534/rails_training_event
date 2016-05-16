@@ -17,7 +17,7 @@ gem 'haml-rails'
 gem 'omniauth'
 gem 'omniauth-oauth2'
 gem 'omniauth-twitter'
-gem 'omniauth-facebook'
+gem 'omniauth-github'
 gem "rspec"
 gem 'twitter'
 gem 'twitter-bootstrap-rails'

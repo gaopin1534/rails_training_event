@@ -1,5 +1,26 @@
 ---
 ja:
+  description: "プロフィール"
+  attend_event: "出席予定"
+  attendance: "出席者"
+  absent_event: "欠席予定"
+  absence: "欠席者"
+  own_event: "作成イベント"
+  my_page: "マイページ"
+  create_event: "イベント作成"
+  login_twitter: "log-in with Twitter"
+  login_github: "log-in with Github"
+  app_name: "ATND的な"
+  title: "イベント名"
+  hold_at: "日時"
+  location: "場所"
+  owner: "主催者"
+  capacity: "人数"
+  no_events: "イベントがありません"
+  no_members: "メンバーがいません"
+  event_detail: "イベント詳細"
+  event_list: "イベントリスト"
+  event_edit: "イベント編集"
   activerecord:
     errors:
       messages:

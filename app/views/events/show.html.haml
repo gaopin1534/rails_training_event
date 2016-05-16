@@ -1,5 +1,5 @@
 %h1
-  イベント詳細
+  = t(:event_detail)
 
 - if logged_in?
   %span
@@ -17,21 +17,23 @@
 
 %div.event-info
   %p
-    = "タイトル: " + @event.title
+    = t(:title) + ":" + @event.title
   %p
-    = "日時: " + @event.hold_at.to_s
+    = t(:hold_at) + ":" + @event.hold_at.to_s
   %p
-    = "人数: " + @event.atendees.count.to_s + "/" + @event.capacity.to_s
+    = t(:capacity) + ":" + @event.atendees.count.to_s + "/" + @event.capacity.to_s
   %p
-    = "場所: " + @event.location
+    = t(:location) + ":" + @event.location
   %p
-    = "主催者: " + @event.owner
-  %p
-    = "詳細: " + @event.description
-  .clear
+    = t(:owner) + ":" + @event.owner
+  %div
+    = t(:event_detail)
+    %br
+  %div.well
+    = @event.description
 %div#attendance
-  = "attendance"
+  = t :attendance
   = render partial: "members", locals: {members: @event.atendees.atends}
 %div#absence
-  = "absence"
+  = t :absence
   = render partial: "members", locals: {members: @event.atendees.absents}

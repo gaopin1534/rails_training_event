@@ -24,17 +24,6 @@ RSpec.describe User, type: :model do
     )
     expect(user).not_to be_valid
   end
-  specify "description shouldn't be empty" do
-    user = User.new(
-      name: 'hgge',
-      nickname: 'gege',
-      description: '',
-      uid: '1234',
-      token: '1dssgsd',
-      secret: 'fdsfdsf',
-    )
-    expect(user).not_to be_valid
-  end
 
   specify "uid shouldn't be empty" do
     user = User.new(
@@ -60,15 +49,4 @@ RSpec.describe User, type: :model do
     expect(user).not_to be_valid
   end
 
-  specify "secret shouldn't be empty" do
-    user = User.new(
-      name: 'hgge',
-      nickname: 'gege',
-      description: 'gge',
-      uid: '1234',
-      token: '1dssgsd',
-      secret: '',
-    )
-    expect(user).not_to be_valid
-  end
 end

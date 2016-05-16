@@ -10,4 +10,11 @@ class Event < ActiveRecord::Base
   validates :owner, presence: true
   validates :description, presence: true
   validates :user, presence: true
+
+  scope :atends, -> {
+    where(status: "attended")
+  }
+  scope :absents, -> {
+    where(status: "absented")
+  }
 end

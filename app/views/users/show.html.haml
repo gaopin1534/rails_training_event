@@ -4,17 +4,21 @@
 %div.panel.panel-primary.user-info
   %div.user-names.panel-heading
     %span
-      = image_tag @user.image.url
+      = image_tag @user.image.url ,class: "profile-image"
     %span.lead
       = @user.name
     %span.small
       = "@" + @user.nickname.strip
-  %div.panel-body
-    自己紹介<br>
+  %div.panel-body.description:desc
+    = t :description
+    <br>
     = @user.description
 %h4
-  参加予定イベント
+  = t :attend_event
 = render partial: "events", locals: {events: @user.atend_events}
 %h4
-  作成イベント
+  = t :absent_event
+= render partial: "events", locals: {events: @user.absent_events}
+%h4
+  = t :own_event
 = render partial: "events", locals: {events: @user.events}

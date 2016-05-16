@@ -1,15 +1,18 @@
 %nav.navbar.navbar-default.navbar-fixed-top
   %div.container
     %div.navbar-header
-      = link_to "ATND的な", root_path, class:"navbar-brand"
+      = link_to t(:app_name), root_path, class:"navbar-brand"
     %ul.nav.navbar-nav
       - if logged_in?
         %li
           = link_to "log-out", "/signout"
         %li
-          = link_to "マイページ", current_user
+          = link_to t(:my_page), current_user
         %li
-          = link_to "イベント作成", new_event_path
+          = link_to t(:create_event), new_event_path
       - else
         %li
-          = link_to "log-in with Twitter", "/auth/twitter"
+          = link_to t(:login_twitter), "/auth/twitter"
+        %li
+          = link_to t(:login_github), '/auth/github'
+"
