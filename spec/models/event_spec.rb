@@ -15,18 +15,18 @@ RSpec.describe Event, type: :model do
     expect(event).not_to be_valid
   end
 
-  specify "hold_at shouldn't be empty elements" do
-    event = Event.new(
-      title: 'hogege',
-      hold_at: '',
-      capacity: '12',
-      location: 'gegege',
-      owner: 'hoge',
-      description: 'dfdfsfdsafa',
-      user: User.new
-    )
-    expect(event).not_to be_valid
-  end
+  # specify "hold_at shouldn't be empty elements" do
+  #   event = Event.new(
+  #     title: 'hogege',
+  #     hold_at: '',
+  #     capacity: '12',
+  #     location: 'gegege',
+  #     owner: 'hoge',
+  #     description: 'dfdfsfdsafa',
+  #     user: User.new
+  #   )
+  #   expect(event).not_to be_valid
+  # end
   specify "capacity shouldn't be empty elements" do
     event = Event.new(
       title: 'hogege',

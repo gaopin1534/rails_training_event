@@ -14,26 +14,26 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-05-16T19:45:49+09:00">2016-05-16T19:45:49+09:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-05-16T19:58:22+09:00">2016-05-16T19:58:22+09:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">94.77%</span></span>
+    (<span class="covered_percent"><span class="green">94.73%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         6.13
+         6.16
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>47</b> files in total.
-    <b>516</b> relevant lines. 
-    <span class="green"><b>489</b> lines covered</span> and
+    <b>512</b> relevant lines. 
+    <span class="green"><b>485</b> lines covered</span> and
     <span class="red"><b>27</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -124,8 +124,8 @@
         <td class="strong"><a href="#78bf0bc332a87c98c5bae84ffeeb6520b0c7974c" class="src_link" title="app/models/event.rb">app/models/event.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>13</td>
-        <td>11</td>
-        <td>11</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -404,8 +404,8 @@
         <td class="strong"><a href="#f7ab9167075af02d7336c346af41a84bc60af39a" class="src_link" title="spec/models/event_spec.rb">spec/models/event_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>80</td>
-        <td>22</td>
-        <td>22</td>
+        <td>19</td>
+        <td>19</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -427,7 +427,7 @@
         <td>28</td>
         <td>27</td>
         <td>1</td>
-        <td>13.1</td>
+        <td>13.0</td>
       </tr>
       
       <tr>
@@ -1921,8 +1921,8 @@
     <h3>app/models/event.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1966,10 +1966,10 @@
           <code class="ruby">  validates :title, presence: true</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="7">
           
-          <code class="ruby">  validates :hold_at, presence: true</code>
+          
+          <code class="ruby">  # validates :hold_at, presence: true</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
@@ -6541,8 +6541,8 @@
     <h3>spec/models/event_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>22</b> relevant lines. 
-      <span class="green"><b>22</b> lines covered</span> and
+      <b>19</b> relevant lines. 
+      <span class="green"><b>19</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -6652,76 +6652,76 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="18">
           
-          <code class="ruby">  specify &quot;hold_at shouldn&#39;t be empty elements&quot; do</code>
+          
+          <code class="ruby">  # specify &quot;hold_at shouldn&#39;t be empty elements&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="19">
           
-          <code class="ruby">    event = Event.new(</code>
+          
+          <code class="ruby">  #   event = Event.new(</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby">      title: &#39;hogege&#39;,</code>
+          <code class="ruby">  #     title: &#39;hogege&#39;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
           
           
-          <code class="ruby">      hold_at: &#39;&#39;,</code>
+          <code class="ruby">  #     hold_at: &#39;&#39;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
           
           
-          <code class="ruby">      capacity: &#39;12&#39;,</code>
+          <code class="ruby">  #     capacity: &#39;12&#39;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
           
           
-          <code class="ruby">      location: &#39;gegege&#39;,</code>
+          <code class="ruby">  #     location: &#39;gegege&#39;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
           
           
-          <code class="ruby">      owner: &#39;hoge&#39;,</code>
+          <code class="ruby">  #     owner: &#39;hoge&#39;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby">      description: &#39;dfdfsfdsafa&#39;,</code>
+          <code class="ruby">  #     description: &#39;dfdfsfdsafa&#39;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby">      user: User.new</code>
+          <code class="ruby">  #     user: User.new</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
           
           
-          <code class="ruby">    )</code>
+          <code class="ruby">  #   )</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="28">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="28">
           
-          <code class="ruby">    expect(event).not_to be_valid</code>
+          
+          <code class="ruby">  #   expect(event).not_to be_valid</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="29">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">  # end</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="30">
@@ -7912,8 +7912,8 @@
           <code class="ruby">  config.before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="74" data-linenumber="68">
-          <span class="hits">74</span>
+        <li class="covered" data-hits="73" data-linenumber="68">
+          <span class="hits">73</span>
           
           <code class="ruby">    DatabaseCleaner.strategy = :transaction</code>
         </li>
@@ -7984,8 +7984,8 @@
           <code class="ruby">  config.before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="74" data-linenumber="80">
-          <span class="hits">74</span>
+        <li class="covered" data-hits="73" data-linenumber="80">
+          <span class="hits">73</span>
           
           <code class="ruby">    DatabaseCleaner.start</code>
         </li>
@@ -8008,8 +8008,8 @@
           <code class="ruby">  config.append_after(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="74" data-linenumber="84">
-          <span class="hits">74</span>
+        <li class="covered" data-hits="73" data-linenumber="84">
+          <span class="hits">73</span>
           
           <code class="ruby">    DatabaseCleaner.clean</code>
         </li>
