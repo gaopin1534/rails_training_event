@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/01014501/src/twi_event/spec/controllers/events_controller_spec.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/controllers/events_controller_spec.rb": [
         1,
         null,
         1,
@@ -16,7 +16,7 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/spec/rails_helper.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -104,14 +104,14 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/config/environment.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/01014501/src/twi_event/config/application.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/config/application.rb": [
         1,
         null,
         1,
@@ -145,12 +145,12 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/config/boot.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/01014501/src/twi_event/config/environments/test.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/config/environments/test.rb": [
         1,
         null,
         null,
@@ -194,7 +194,7 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/config/initializers/assets.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -207,7 +207,7 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/config/initializers/backtrace_silencers.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -216,18 +216,18 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/config/initializers/cookies_serializer.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/01014501/src/twi_event/config/initializers/filter_parameter_logging.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/01014501/src/twi_event/config/initializers/inflections.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -245,28 +245,23 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/config/initializers/mime_types.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/config/initializers/omniauth.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/config/initializers/omniauth.rb": [
         1,
         1,
-        null,
-        1,
-        null,
-        2,
-        null,
         null
       ],
-      "/Users/01014501/src/twi_event/config/initializers/session_store.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/01014501/src/twi_event/config/initializers/wrap_parameters.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -282,7 +277,7 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/spec/factories/atendees.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/factories/atendees.rb": [
         1,
         1,
         1,
@@ -291,7 +286,7 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/spec/factories/events.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/factories/events.rb": [
         1,
         1,
         1,
@@ -304,7 +299,7 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/spec/factories/users.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/factories/users.rb": [
         1,
         1,
         82,
@@ -325,18 +320,7 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/config/routes.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
+      "/Users/takamatsukouhei/src/rails_training_event/config/routes.rb": [
         1,
         1,
         null,
@@ -344,8 +328,16 @@
         1,
         1,
         1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
+        1,
         1,
         1,
         null,
@@ -405,17 +397,13 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/app/helpers/application_helper.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/01014501/src/twi_event/app/helpers/sessions_helper.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/app/helpers/sessions_helper.rb": [
         1,
         1,
-        3,
-        3,
-        3,
-        3,
         3,
         3,
         0,
@@ -453,14 +441,14 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/spec/support/login_helper.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/support/login_helper.rb": [
         1,
         1,
         26,
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/app/controllers/events_controller.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/app/controllers/events_controller.rb": [
         1,
         1,
         1,
@@ -523,8 +511,6 @@
         9,
         9,
         9,
-        9,
-        9,
         null,
         null,
         12,
@@ -537,7 +523,7 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/app/controllers/application_controller.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -548,36 +534,25 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/spec/controllers/sessions_controller_spec.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/controllers/sessions_controller_spec.rb": [
         1,
         null,
         1,
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/app/controllers/sessions_controller.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/app/controllers/sessions_controller.rb": [
         1,
-        null,
-        1,
-        null,
-        3,
-        3,
-        null,
-        0,
-        null,
         null,
         null,
         1,
-        3,
-        3,
-        3,
         3,
         3,
         null,
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/spec/controllers/users_controller_spec.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/controllers/users_controller_spec.rb": [
         1,
         null,
         1,
@@ -585,7 +560,7 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/app/controllers/users_controller.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/app/controllers/users_controller.rb": [
         1,
         null,
         1,
@@ -604,13 +579,7 @@
         0,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        null,
         0,
         null,
         null,
@@ -628,7 +597,7 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/spec/features/events_spec.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/features/events_spec.rb": [
         1,
         null,
         1,
@@ -830,7 +799,7 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/spec/features/omniauth_spec.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/features/omniauth_spec.rb": [
         1,
         null,
         1,
@@ -915,7 +884,7 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/spec/features/users_spec.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/features/users_spec.rb": [
         1,
         null,
         1,
@@ -934,7 +903,7 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/spec/helpers/sessions_helper_spec.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/helpers/sessions_helper_spec.rb": [
         1,
         null,
         null,
@@ -950,14 +919,14 @@
         1,
         null
       ],
-      "/Users/01014501/src/twi_event/spec/models/atendee_spec.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/models/atendee_spec.rb": [
         1,
         null,
         1,
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/app/models/atendee.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/app/models/atendee.rb": [
         1,
         1,
         1,
@@ -977,188 +946,105 @@
         6,
         null,
         null,
-        null
-      ],
-      "/Users/01014501/src/twi_event/spec/models/event_spec.rb": [
-        1,
         null,
         1,
-        1,
-        1,
-        1,
+        9,
+        9,
+        9,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null
-      ],
-      "/Users/01014501/src/twi_event/app/models/event.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/01014501/src/twi_event/spec/models/user_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/app/models/user.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/models/event_spec.rb": [
+        1,
+        null,
         1,
         1,
         1,
         1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         1,
         1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/takamatsukouhei/src/rails_training_event/app/models/event.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
         1,
         1,
         1,
@@ -1166,7 +1052,109 @@
         1,
         null
       ],
-      "/Users/01014501/src/twi_event/app/uploaders/image_uploader.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/models/user_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/takamatsukouhei/src/rails_training_event/app/models/user.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/takamatsukouhei/src/rails_training_event/app/uploaders/image_uploader.rb": [
         null,
         null,
         1,
@@ -1219,55 +1207,55 @@
         null,
         null
       ],
-      "/Users/01014501/src/twi_event/spec/views/events/detail.html.erb_spec.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/views/events/detail.html.erb_spec.rb": [
         1,
         null,
         1,
         null
       ],
-      "/Users/01014501/src/twi_event/spec/views/events/index.html.erb_spec.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/views/events/index.html.erb_spec.rb": [
         1,
         null,
         1,
         null
       ],
-      "/Users/01014501/src/twi_event/spec/views/sessions/create.html.haml_spec.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/views/sessions/create.html.haml_spec.rb": [
         1,
         null,
         1,
         null
       ],
-      "/Users/01014501/src/twi_event/spec/views/sessions/destroy.html.haml_spec.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/views/sessions/destroy.html.haml_spec.rb": [
         1,
         null,
         1,
         null
       ],
-      "/Users/01014501/src/twi_event/spec/views/sessions/new.html.haml_spec.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/views/sessions/new.html.haml_spec.rb": [
         1,
         null,
         1,
         null
       ],
-      "/Users/01014501/src/twi_event/spec/views/users/create.html.haml_spec.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/views/users/create.html.haml_spec.rb": [
         1,
         null,
         1,
         null
       ],
-      "/Users/01014501/src/twi_event/spec/views/users/destroy.html.haml_spec.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/views/users/destroy.html.haml_spec.rb": [
         1,
         null,
         1,
         null
       ],
-      "/Users/01014501/src/twi_event/spec/views/users/new.html.haml_spec.rb": [
+      "/Users/takamatsukouhei/src/rails_training_event/spec/views/users/new.html.haml_spec.rb": [
         1,
         null,
         1,
         null
       ]
     },
-    "timestamp": 1463396302
+    "timestamp": 1463409276
   }
 }

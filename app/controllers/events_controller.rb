@@ -58,9 +58,7 @@ class EventsController < ApplicationController
       @atendee.save
     else
       @atendee = Atendee.new
-      @atendee.event = Event.find(params[:id])
-      @atendee.user = current_user
-      @atendee.status = "attended"
+      @atendee.atend_params Event.find(params[:id]), current_user, 'attended'
       @atendee.save
     end
 

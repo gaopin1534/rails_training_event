@@ -1,15 +1,15 @@
 %h1
   マイページ
 
-%ul.list-unstyled.user-info
-  %li.user-names.container
+%div.panel.panel-primary.user-info
+  %div.user-names.panel-heading
     %span
       = image_tag @user.image.url
     %span.lead
       = @user.name
     %span.small
       = "@" + @user.nickname.strip
-  %li
+  %div.panel-body
     自己紹介<br>
     = @user.description
 %h4

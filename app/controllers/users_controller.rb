@@ -8,22 +8,16 @@ class UsersController < ApplicationController
     @auth = request.env['omniauth.auth']
     @user = User.find_by(uid: @auth.uid)
     if @user
-      data = {id: @user.id, uid: @auth.uid, token: @auth.credentials.token, secret: @auth.credentials.secret, name: @auth.info.name}
-      redirect_to sessions_create_url(data)
+      login! @user
+      redirect_to events_path, :notice => "login as " + @user.name
     else
       @user = User.new()
-      @user.name = @auth.info.name
-      @user.uid = @auth.uid
-      @user.nickname = @auth.info.nickname
-      @user.description = @auth.info.description
-      @user.token = @auth.credentials.token
-      @user.secret = @auth.credentials.secret
-      uploader = ImageUploader.new
-      uploader.download! @auth.info.image
-      @user.image = uploader
+      @user.get_data_from_auth_info @auth
       if @user.save
         login!(@user)
         redirect_to root_path, :notice => "Signed in!"
+      else
+        redirect_to root_path, :notice => "failed to logging in"
       end
     end
   end

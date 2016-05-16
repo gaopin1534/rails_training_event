@@ -9,4 +9,16 @@ class User < ActiveRecord::Base
   validates :token, presence: true
   validates :secret, presence: true
   mount_uploader :image, ImageUploader
+
+   def get_data_from_auth_info auth
+     self.name = auth.info.name
+     self.uid = auth.uid
+     self.nickname = auth.info.nickname
+     self.description = auth.info.description
+     self.token = auth.credentials.token
+     self.secret = auth.credentials.secret
+     uploader = ImageUploader.new
+     uploader.download! auth.info.image
+     self.image = uploader
+   end
 end

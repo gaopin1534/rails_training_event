@@ -1,3 +1,6 @@
+- if events.empty?
+  %div.list-group-item
+    イベントはありません
 %div.list-group.event-list
   = div_for events, class: "list-group-item" do |t|
     %div.lead

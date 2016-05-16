@@ -17,6 +17,7 @@ gem 'haml-rails'
 gem 'omniauth'
 gem 'omniauth-oauth2'
 gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 gem "rspec"
 gem 'twitter'
 gem 'twitter-bootstrap-rails'
@@ -59,6 +60,7 @@ group :test do
   gem 'launchy', '~> 2.3.0'
   gem 'selenium-webdriver', '~>2.45.0'
   gem 'rack_session_access'
+  gem 'simplecov'
 end
 
 

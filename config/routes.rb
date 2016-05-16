@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   root 'events#index'
-  get 'sessions/new'
 
-  get 'sessions/create'
   get 'sessions/destroy'
   resources :users
   post 'atendeds/create'
@@ -10,14 +8,13 @@ Rails.application.routes.draw do
   post 'absenteds/create'
   delete 'absenteds/destroy'
   get 'events/atend'
-  get '/auth/failure' => 'sessions#failure'
-  # get '/oauth/autheticate' => "users#create"
   resources :events do
     member do
       get 'absent'
       get 'atend'
     end
   end
+  get '/auth/failure' => 'sessions#failure'
   match "/auth/:provider/callback" => "users#create", via: [:get, :post]
   match "/signout" => "sessions#destroy", via: [:get, :post]
 

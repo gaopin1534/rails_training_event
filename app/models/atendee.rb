@@ -17,4 +17,11 @@ class Atendee < ActiveRecord::Base
       false
     end
   end
+
+  def atend_params event, user, status
+    self.event = event
+    self.user = user
+    self.status = status
+  end
+
 end
