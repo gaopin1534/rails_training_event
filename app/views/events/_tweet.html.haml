@@ -1,0 +1,5 @@
+= form_tag "/events/tweet", method: "post" do
+  = label_tag :tweet
+  %br
+  = text_area_tag :tweet, t(:tweet_preset,title: @event.title),cols:45, rows:5, class: "tweet_field"
+  = submit_tag t(:tweet), class: "btn btn-primary"

@@ -21,6 +21,11 @@ ja:
   event_detail: "イベント詳細"
   event_list: "イベントリスト"
   event_edit: "イベント編集"
+  loggedin_by: "logged in with"
+  tweet: "つぶやく！"
+  tweet_preset: "%{title}に参加しよう！"
+  tweet_notice: "tweetしました！"
+
   activerecord:
     errors:
       messages:

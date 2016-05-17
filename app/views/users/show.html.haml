@@ -3,15 +3,19 @@
 
 %div.panel.panel-primary.user-info
   %div.user-names.panel-heading
-    %span
+    %span.profile-image.pull-left
       = image_tag @user.image.url ,class: "profile-image"
     %span.lead
       = @user.name
     %span.small
       = "@" + @user.nickname.strip
+    - if(@user.provider)
+      %br
+      %span.small
+        = t(:loggedin_by) + " " + @user.provider
   %div.panel-body.description:desc
     = t :description
-    <br>
+    %br
     = @user.description
 %h4
   = t :attend_event

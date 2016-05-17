@@ -31,6 +31,8 @@
     %br
   %div.well
     = @event.description
+- if logged_in? && current_user.provider == "twitter"
+  = render partial: "tweet"
 %div#attendance
   = t :attendance
   = render partial: "members", locals: {members: @event.atendees.atends}

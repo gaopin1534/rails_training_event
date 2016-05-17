@@ -27,6 +27,7 @@ gem 'bootstrap3-datetimepicker-rails'
 gem 'seed-fu'
 gem 'carrierwave'
 gem 'jquery-turbolinks'
+gem 'config'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

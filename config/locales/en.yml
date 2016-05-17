@@ -21,6 +21,8 @@ en:
   event_detail: "event detail"
   event_list: "event list"
   event_edit: "event edit"
+  loggedin_by: "logged in with"
+  tweet: "tweet!!"
 
   activerecord:
     errors:

@@ -7,7 +7,7 @@ FactoryGirl.define do
     description { Faker::StarWars.quote }
     token { "#{Faker::Number.number 8 }-#{Faker::Number.hexadecimal 41}" }
     secret { Faker::Number.hexadecimal 45 }
-
+    provider "twitter"
     trait :with_events do
       after(:create) do |user|
         3.times do

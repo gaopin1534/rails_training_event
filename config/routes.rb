@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   post 'absenteds/create'
   delete 'absenteds/destroy'
   get 'events/atend'
+  post 'events/tweet'
   resources :events do
     member do
       get 'absent'
