@@ -18,6 +18,7 @@ gem 'omniauth'
 gem 'omniauth-oauth2'
 gem 'omniauth-twitter'
 gem 'omniauth-github'
+gem 'omniauth-facebook'
 gem "rspec"
 gem 'twitter'
 gem 'twitter-bootstrap-rails'

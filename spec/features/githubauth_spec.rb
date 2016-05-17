@@ -4,8 +4,8 @@ RSpec.describe '/auth', type: :feature do
   subject { page }
 
   describe '/auth/github' do
-    let(:user){ create :user }
 
+    let(:user){ create :user }
     context 'success' do
       before do
         OmniAuth.config.mock_auth[:github] =
@@ -23,8 +23,13 @@ RSpec.describe '/auth', type: :feature do
                                  })
         visit user_path id: user.id
         click_link 'log-in with Github'
+        user.get_data_from_auth_info_for_update OmniAuth.config.mock_auth[:github]
       end
 
+      it { user.uid.should eq OmniAuth.config.mock_auth[:github][:uid] }
+      it { user.name.should eq OmniAuth.config.mock_auth[:github][:info][:name] }
+      it { user.nickname.should eq OmniAuth.config.mock_auth[:github][:info][:nickname] }
+      it { user.token.should eq OmniAuth.config.mock_auth[:github][:credentials][:token] }
       it { current_path.should eq events_path }
       it { should have_content "login as #{user.name}" }
       it { should_not have_content 'login failure' }

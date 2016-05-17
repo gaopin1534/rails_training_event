@@ -21,7 +21,7 @@ class EventsController < ApplicationController
     @event.owner = current_user.name
     @event.user = current_user
     if @event.save
-      redirect_to @event, :notice => "event created!"
+      redirect_to @event, notice: t(:created_event)
     else
       render :new
     end
@@ -30,14 +30,14 @@ class EventsController < ApplicationController
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
-    redirect_to events_path, notice: "event was deleted!"
+    redirect_to events_path, notice: t(:deleted_event)
   end
 
   def update
     @event = Event.find(params[:id])
     @event.owner = current_user.name
     if @event.update_attributes(event_params)
-      redirect_to @event, notice: "event updated"
+      redirect_to @event, notice: t(:updated_event)
     else
       render 'edit'
     end
@@ -55,7 +55,7 @@ class EventsController < ApplicationController
     @atendee = Atendee.find_by(user: current_user, event: @event)
     @atendee.status = "absented"
     @atendee.save
-    redirect_to @event, notice: '参加をキャンセルしました'
+    redirect_to @event, notice: t(:joined_event)
   end
 
   def atend
@@ -69,7 +69,7 @@ class EventsController < ApplicationController
       @atendee.save
     end
 
-    redirect_to @event , notice: 'イベントに参加しました'
+    redirect_to @event , notice: t(:canceled_event)
   end
   private
 

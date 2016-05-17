@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160517041217) do
+ActiveRecord::Schema.define(version: 20160517090709) do
 
   create_table "Events", force: :cascade do |t|
     t.string   "title"
@@ -52,11 +52,11 @@ ActiveRecord::Schema.define(version: 20160517041217) do
     t.string   "nickname"
     t.text     "description"
     t.string   "image"
-    t.integer  "uid"
+    t.integer  "uid",         limit: 8
     t.string   "token"
     t.string   "secret"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
     t.text     "provider"
   end
 

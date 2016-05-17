@@ -10,6 +10,7 @@ en:
   create_event: "create event"
   login_twitter: "log-in with Twitter"
   login_github: "log-in with Github"
+  login_facebook: "log-in with Facebook"
   app_name: "ATND like"
   title: "title"
   hold_at: "date"
@@ -23,6 +24,15 @@ en:
   event_edit: "event edit"
   loggedin_by: "logged in with"
   tweet: "tweet!!"
+  tweet_preset: "let's join %{title}"
+  tweet_notice: "tweeted!"
+  login_success: "login as %{name}"
+  login_failed: "failed to logging in"
+  joined_event: "joined en event"
+  canceled_event: "canceled an event"
+  created_event: "event created!"
+  deleted_event: "event deleted!"
+  updated_event: "event updated!"
 
   activerecord:
     errors:

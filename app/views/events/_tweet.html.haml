@@ -1,4 +1,4 @@
-= form_tag "/events/tweet", method: "post" do
+= form_tag "/events/tweet", method: "post",id: "tweet_form" do
   = label_tag :tweet
   %br
   = text_area_tag :tweet, t(:tweet_preset,title: @event.title),cols:45, rows:5, class: "tweet_field"

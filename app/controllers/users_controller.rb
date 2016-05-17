@@ -7,19 +7,17 @@ class UsersController < ApplicationController
   def create
     @auth = request.env['omniauth.auth']
     @user = User.find_by(uid: @auth.uid)
-    if @user
-      login! @user
-      redirect_to events_path, :notice => "login as " + @user.name
-    else
+    if @user.blank?
       @user = User.new()
       @user.get_data_from_auth_info @auth
-      if @user.save
-        login!(@user)
-        redirect_to root_path, :notice => "Signed in!"
-      else
-        raise
-        redirect_to root_path, :notice => "failed to logging in"
-      end
+    else
+      @user.get_data_from_auth_info_for_update @auth
+    end
+    if @user.save
+      login! @user
+      redirect_to events_path, :notice => "login as #{@user.name}"
+    else
+      redirect_to events_path, :notice => "failed to logging in"
     end
   end
 
