@@ -5,23 +5,29 @@
   %span
   - if current_user
     - if current_user.atendees.with_event(@event.id).first
-      - if current_user.atendees.with_event(@event.id).first.atend?
+      - if current_user.atendees.with_event(@event.id).first.atend_btn(@event) == "Atend"
+        = link_to "Atend", atend_event_path(@event), class: "btn btn-primary"
+      - elsif current_user.atendees.with_event(@event.id).first.atend_btn(@event) == "Absent"
         = link_to "Absent", absent_event_path(@event), class: "btn btn-danger"
+      - elsif current_user.atendees.with_event(@event.id).first.atend_btn(@event) == "Join Wait List"
+        = link_to "Join Wait List",wait_event_path(@event), class: "btn btn-info"
+      - else
+        = link_to "Cancel Waiting",absent_event_path(@event) ,class: "btn btn-info"
+    - else
+      - if @event.atendees.atends.count == @event.capacity
+        = link_to "Join Wait List",wait_event_path(@event) ,class: "btn btn-info"
       - else
         = link_to "Atend", atend_event_path(@event), class: "btn btn-primary"
-    - else
-      = link_to "Atend", atend_event_path(@event), class: "btn btn-primary"
-  = link_to "Edit", edit_event_path
-  = link_to "Destroy", event_path, method: :delete
 
-
+  = link_to "Edit", edit_event_path, class: "styled"
+  = link_to "Destroy", event_path, class: "styled", method: :delete
 %div.event-info
-  %p
-    = t(:title) + ":" + @event.title
+  %h2
+    =  @event.title
   %p
     = t(:hold_at) + ":" + @event.hold_at.to_s
   %p
-    = t(:capacity) + ":" + @event.atendees.count.to_s + "/" + @event.capacity.to_s
+    = t(:capacity) + ":" + @event.atendees.waits_and_atends.count.to_s + "/" + @event.capacity.to_s
   %p
     = t(:location) + ":" + @event.location
   %p
@@ -36,6 +42,9 @@
 %div#attendance
   = t :attendance
   = render partial: "members", locals: {members: @event.atendees.atends}
+%div#waiting
+  = t :waiting
+  = render partial: "members", locals: {members: @event.atendees.waits}
 %div#absence
   = t :absence
   = render partial: "members", locals: {members: @event.atendees.absents}

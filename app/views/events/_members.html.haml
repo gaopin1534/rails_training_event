@@ -4,5 +4,5 @@
 = div_for members, class: "list-group-item" do |t|
   %span.user-name#t.id
     = image_tag t.user.image.url ,class: "profile-image"
-    = link_to t.user.name, user_path(t.user)
+    = link_to t.user.name, user_path(t.user), class:"styled"
     = t.user.nickname

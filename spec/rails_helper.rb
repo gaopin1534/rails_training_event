@@ -22,6 +22,7 @@ require 'rack_session_access/capybara'
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
 #
+# Rails.logger = Logger.new(STDOUT)
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 # Checks for pending migration and applies them before tests are run.
@@ -58,7 +59,6 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 
   config.include LoginHelper
-  config.include TweetHelper
   config.include FactoryGirl::Syntax::Methods
 
   config.before(:suite) do

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     member do
       get 'absent'
       get 'atend'
+      get 'wait'
     end
   end
   get '/auth/failure' => 'sessions#failure'

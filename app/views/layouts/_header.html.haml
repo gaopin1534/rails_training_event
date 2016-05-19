@@ -1,7 +1,7 @@
-%nav.navbar.navbar-default.navbar-fixed-top
+%nav.navbar.navbar-default.navbar-static-top
   %div.container
     %div.navbar-header
-      = link_to t(:app_name), root_path, class:"navbar-brand"
+      = link_to "", root_path, class:"navbar-brand"
     %ul.nav.navbar-nav
       - if logged_in?
         %li
@@ -11,9 +11,12 @@
         %li
           = link_to t(:create_event), new_event_path
       - else
-        %li
-          = link_to t(:login_twitter), "/auth/twitter"
-        %li
-          = link_to t(:login_github), '/auth/github'
-        %li
-          = link_to t(:login_facebook), '/auth/facebook'
+        %li.dropdown
+          = link_to 'login ▼', "", class:"dropdown-toggle", "data-toggle" => "dropdown"
+          %ul.dropdown-menu.login-drop
+            %li.login-btns
+              = link_to t(:login_twitter), "/auth/twitter", class: "btn btn-twitter"
+            %li.login-btns
+              = link_to t(:login_github), '/auth/github', class: "btn btn-github"
+            %li.login-btns
+              = link_to t(:login_facebook), '/auth/facebook', class: "btn btn-facebook"

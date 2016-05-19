@@ -1,6 +1,4 @@
 -if object.errors.any?
-  %div.alert-danger
-    %ul
+  %div.alert.alert-danger
     - object.errors.each do |attr, msg|
-      %li
-        = attr.to_s + ' '+msg
+      = attr.to_s + ' '+msg

@@ -5,7 +5,7 @@ class Event < ActiveRecord::Base
 
   validates :title, presence: true
   # validates :hold_at, presence: true
-  validates :capacity, presence: true
+  validates :capacity, presence: true, numericality: { greater_than_or_equal_to: 1 } 
   validates :location, presence: true
   validates :owner, presence: true
   validates :description, presence: true

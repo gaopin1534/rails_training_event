@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_many :atendees, :dependent => :destroy
   has_many :atend_events, -> { where "status = 'attended'"}, class_name: 'Event', through: :atendees, source: :event
   has_many :absent_events,-> { where "status = 'absented'"}, class_name: 'Event', through: :atendees, source: :event
+  has_many :waiting_events,-> { where "status = 'waiting'"}, class_name: 'Event', through: :atendees, source: :event
   validates :name, presence: true
   validates :nickname, presence: true
   validates :uid, presence: true

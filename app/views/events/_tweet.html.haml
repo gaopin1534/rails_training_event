@@ -2,4 +2,5 @@
   = label_tag :tweet
   %br
   = text_area_tag :tweet, t(:tweet_preset,title: @event.title),cols:45, rows:5, class: "tweet_field"
+  = hidden_field_tag :event_id, @event.id
   = submit_tag t(:tweet), class: "btn btn-primary"

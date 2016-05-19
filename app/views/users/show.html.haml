@@ -21,6 +21,9 @@
   = t :attend_event
 = render partial: "events", locals: {events: @user.atend_events}
 %h4
+  = t :waiting
+= render partial: "events", locals: {events: @user.waiting_events}
+%h4
   = t :absent_event
 = render partial: "events", locals: {events: @user.absent_events}
 %h4

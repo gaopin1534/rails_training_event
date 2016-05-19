@@ -47,7 +47,20 @@ class EventsController < ApplicationController
     text = params[:tweet]
     twitter_client.update(text)
     flash[:notice] = t :tweet_notice
-    redirect_to events_path
+    redirect_to Event.find(params[:event_id])
+  end
+
+  def wait
+    @event = Event.find(params[:id])
+    if @atendee = Atendee.find_by(user: current_user, event: @event)
+      @atendee.status = "waiting"
+      @atendee.save
+    else
+      @atendee = Atendee.new
+      @atendee.atend_params Event.find(params[:id]), current_user, 'waiting'
+      @atendee.save
+    end
+    redirect_to @event , notice: t(:joined_wait)
   end
 
   def absent
@@ -55,7 +68,12 @@ class EventsController < ApplicationController
     @atendee = Atendee.find_by(user: current_user, event: @event)
     @atendee.status = "absented"
     @atendee.save
-    redirect_to @event, notice: t(:joined_event)
+    @first_waiter = @event.atendees.waits.first
+    if(@first_waiter)
+      @first_waiter.status = "attended"
+      @first_waiter.save
+    end
+    redirect_to @event, notice: t(:canceled_event)
   end
 
   def atend
@@ -68,9 +86,9 @@ class EventsController < ApplicationController
       @atendee.atend_params Event.find(params[:id]), current_user, 'attended'
       @atendee.save
     end
-
-    redirect_to @event , notice: t(:canceled_event)
+    redirect_to @event , notice: t(:joined_event)
   end
+
   private
 
     # Never trust parameters from the scary internet, only allow the white list through.
