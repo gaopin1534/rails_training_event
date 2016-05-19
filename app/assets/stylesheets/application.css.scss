@@ -43,6 +43,21 @@ a.btn:visited {
   @extend .has-error;
 }
 
+.from-twitter{
+  color: #fff;
+  background-color: #00ACED;
+  border-color: #00ACED;
+}
+.btn-github {
+   color: #fff;
+   background-color: #333333;
+   border-color: #333333;
+}
+.btn-facebook {
+   color: #fff;
+   background-color: #43609C;
+   border-color: #43609C;
+}
 /* header */
 .navbar-brand{
   background: url("title.png") no-repeat left center;
